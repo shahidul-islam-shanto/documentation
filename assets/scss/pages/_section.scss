@@ -14,6 +14,7 @@
 
         .nav-area {
           .nav-link {
+            color: #ffff;
             margin-right: 2rem;
             font-size: 18px;
             font-weight: 600;
@@ -23,6 +24,8 @@
             }
           }
         }
+      }
+      .toggle-area {
         .toggle-navbar {
           color: #ffff;
           display: none;
@@ -565,7 +568,7 @@
   .header-area {
     .container {
       .navber-area {
-        .navBer {
+        .toggle-area {
           .toggle-navbar {
             display: block;
           }
@@ -632,6 +635,48 @@
 }
 
 @media (max-width: 575px) {
+  // navber section start
+  .header-area {
+    padding: 10px 0;
+    background-color: #a6aebf;
+    .container {
+      .navber-area {
+        display: flex;
+        flex-wrap: wrap;
+
+        .icon {
+          margin: auto;
+          padding: 10px 0;
+        }
+        .navBer {
+          display: flex;
+          flex-wrap: wrap;
+          position: relative;
+          .nav-area {
+            .nav-link {
+              margin-right: 7px;
+              margin-top: 0.5rem;
+              font-size: 13px;
+              padding: 6px 10px;
+              background-color: #b7bac0;
+              border-radius: 50px;
+            }
+          }
+        }
+        .toggle-area {
+          margin: auto;
+          .toggle-navbar {
+            padding: 10px;
+            margin-top: 0.5rem;
+            background-color: #b7bac0;
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  // documentation section
   .document-area {
     .container {
       .row {
@@ -643,14 +688,32 @@
             -webkit-transition: all 0.5s;
             transition: all 0.5s;
             z-index: 9999;
-            // -webkit-box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
-            // box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 0;
             overflow: scroll;
 
             &.active {
               box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
               right: 0;
+            }
+            .nav {
+              .search {
+                .input-group {
+                  .search-input {
+                    width: 270px;
+                    padding: 0.7rem 1rem;
+                  }
+                }
+              }
+              .doc-nav {
+                li {
+                  .sub-nav {
+                    padding-left: 1.5rem;
+                  }
+                }
+              }
+              .doc-nav a {
+                line-height: 1.5rem;
+              }
             }
           }
         }

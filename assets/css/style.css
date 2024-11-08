@@ -1848,6 +1848,7 @@ input[type=radio] {
   align-items: center;
 }
 .header-area .container .navber-area .navBer .nav-area .nav-link {
+  color: white;
   margin-right: 2rem;
   font-size: 18px;
   font-weight: 600;
@@ -1855,7 +1856,7 @@ input[type=radio] {
 .header-area .container .navber-area .navBer .nav-area .nav-link:hover {
   color: red;
 }
-.header-area .container .navber-area .navBer .toggle-navbar {
+.header-area .container .navber-area .toggle-area .toggle-navbar {
   color: white;
   display: none;
   font-size: 20px;
@@ -2324,7 +2325,7 @@ input[type=radio] {
   }
 }
 @media (max-width: 991px) {
-  .header-area .container .navber-area .navBer .toggle-navbar {
+  .header-area .container .navber-area .toggle-area .toggle-navbar {
     display: block;
   }
   .document-area {
@@ -2363,6 +2364,40 @@ input[type=radio] {
   }
 }
 @media (max-width: 575px) {
+  .header-area {
+    padding: 10px 0;
+    background-color: #a6aebf;
+  }
+  .header-area .container .navber-area {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header-area .container .navber-area .icon {
+    margin: auto;
+    padding: 10px 0;
+  }
+  .header-area .container .navber-area .navBer {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .header-area .container .navber-area .navBer .nav-area .nav-link {
+    margin-right: 7px;
+    margin-top: 0.5rem;
+    font-size: 13px;
+    padding: 6px 10px;
+    background-color: #b7bac0;
+    border-radius: 50px;
+  }
+  .header-area .container .navber-area .toggle-area {
+    margin: auto;
+  }
+  .header-area .container .navber-area .toggle-area .toggle-navbar {
+    padding: 10px;
+    margin-top: 0.5rem;
+    background-color: #b7bac0;
+    border-radius: 50px;
+  }
   .document-area .container .row .side-header .sideber-area {
     right: -130%;
     width: 320px;
@@ -2375,5 +2410,15 @@ input[type=radio] {
   .document-area .container .row .side-header .sideber-area.active {
     box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
     right: 0;
+  }
+  .document-area .container .row .side-header .sideber-area .nav .search .input-group .search-input {
+    width: 270px;
+    padding: 0.7rem 1rem;
+  }
+  .document-area .container .row .side-header .sideber-area .nav .doc-nav li .sub-nav {
+    padding-left: 1.5rem;
+  }
+  .document-area .container .row .side-header .sideber-area .nav .doc-nav a {
+    line-height: 1.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
