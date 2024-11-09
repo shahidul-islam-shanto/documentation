@@ -1,7 +1,7 @@
 // navber section start
 .header-area {
-  padding: 10px 0;
-  background-color: #a6aebf;
+  padding: 14px 0;
+  background-color: #1a1a19;
   .container {
     .navber-area {
       display: flex;
@@ -10,7 +10,9 @@
 
       .navBer {
         display: flex;
+        justify-content: end;
         align-items: center;
+        width: 100%;
 
         .nav-area {
           .nav-link {
@@ -439,15 +441,20 @@
           padding: 1rem 1.5rem;
           border-radius: 20px;
           position: fixed;
-          top: 80px;
+          top: 88px;
           bottom: 70px;
           width: 460px;
-          height: 90vh;
+          height: 88vh;
           transition: all 0.5s;
           z-index: 999;
 
+          .stick-to-top {
+            top: 40px;
+          }
+
           .icon-area {
             text-align: center;
+            display: none;
             .icons {
               i {
                 background-color: #046155;
@@ -464,7 +471,7 @@
             .logo-area {
               a {
                 h2 {
-                  padding: 1rem 1.5rem;
+                  padding: 1rem 5.5rem;
                   text-align: center;
                   color: #000000;
                 }
@@ -526,6 +533,24 @@
   }
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: #ffff;
+  background-color: #0cd3b8;
+  padding: 1em 1.5rem;
+  font-size: 16px;
+  display: none;
+  z-index: 999;
+  border-radius: 50px;
+
+  &:hover {
+    background-color: #099986;
+  }
+}
+
 // responsive
 @media (max-width: 1399px) {
   .document-area {
@@ -556,6 +581,9 @@
                 }
               }
             }
+            .stick-to-top {
+              top: 0;
+            }
           }
         }
       }
@@ -572,6 +600,11 @@
           .toggle-navbar {
             display: block;
           }
+        }
+        .navBer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
     }
@@ -598,6 +631,9 @@
             &.active {
               box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
               right: 0%;
+            }
+            .icon-area {
+              display: block;
             }
           }
         }
@@ -638,7 +674,7 @@
   // navber section start
   .header-area {
     padding: 10px 0;
-    background-color: #a6aebf;
+
     .container {
       .navber-area {
         display: flex;
@@ -664,9 +700,9 @@
           }
         }
         .toggle-area {
-          margin: auto;
+          margin-left: auto;
           .toggle-navbar {
-            padding: 10px;
+            padding: 6px 10px;
             margin-top: 0.5rem;
             background-color: #b7bac0;
             border-radius: 50px;
@@ -696,6 +732,13 @@
               right: 0;
             }
             .nav {
+              .logo-area {
+                a {
+                  h2 {
+                    padding: 1rem 0rem;
+                  }
+                }
+              }
               .search {
                 .input-group {
                   .search-input {
