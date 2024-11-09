@@ -2285,16 +2285,16 @@ input[type=radio] {
 }
 
 .page-footer {
-  background-color: #a6aebf;
+  background-color: #1a1a19;
   padding: 19px 0;
   position: relative;
 }
 .page-footer p {
-  color: #000000;
+  color: white;
   margin: 0;
 }
 .page-footer a {
-  color: #046155;
+  color: #0cd3b8;
 }
 .page-footer a:hover {
   text-decoration: underline;

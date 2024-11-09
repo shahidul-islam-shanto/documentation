@@ -510,16 +510,16 @@
 
 // footer section
 .page-footer {
-  background-color: #a6aebf;
+  background-color: #1a1a19;
   padding: 19px 0;
   position: relative;
 
   p {
-    color: #000000;
+    color: #ffff;
     margin: 0;
   }
   a {
-    color: #046155;
+    color: #0cd3b8;
 
     &:hover {
       text-decoration: underline;
@@ -765,7 +765,7 @@
               .stongx {
                 font-size: 14px;
               }
-              .note{
+              .note {
                 background-color: #046155;
               }
             }
@@ -809,7 +809,6 @@
             ol {
               padding-left: 1rem;
             }
-            
           }
           #section-4 {
             padding: 1rem 0.5rem;
