@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexible Navbar and Card Scroll</title>
+    <style>
+      /* Basic styling */
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 20px;
+      }
+
+      /* Navbar styling */
+      .navbar {
+        width: 90%;
+        max-width: 500px;
+        overflow-y: auto; /* Scrollable content */
+        border-radius: 10px;
+        background-color: #333;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-item {
+        padding: 5px 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Card styling */
+      .card {
+        width: 90%;
+        max-width: 500px;
+        overflow-y: auto; /* Scrollable content inside */
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+
+      /* Card content */
+      .card-content {
+        background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+        color: #333;
+        padding: 10px;
+      }
+
+      /* Button styling */
+      .scroll-button {
+        padding: 12px 24px;
+        font-size: 16px;
+        color: white;
+        background: linear-gradient(90deg, #007bff, #0056d6);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .scroll-button:hover {
+        background: linear-gradient(90deg, #0056d6, #007bff);
+        transform: translateY(-2px);
+      }
+
+      .scroll-button:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+      <div class="navbar-item">Navbar Item 1</div>
+      <div class="navbar-item">Navbar Item 2</div>
+      <div class="navbar-item">Navbar Item 3</div>
+      <div class="navbar-item">Navbar Item 4</div>
+      <div class="navbar-item">Navbar Item 5</div>
+      <div class="navbar-item">Navbar Item 6</div>
+    </div>
+
+    <!-- Card with scrollable content -->
+    <div class="card" id="card">
+      <div class="card-content">
+        <p>
+          This is a long content section inside the card. Scroll up to see more
+          content.
+        </p>
+        <p>
+          Each click on the button will scroll the navbar down and the card
+          content up by 5%.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>
+          Vestibulum eget risus ut eros facilisis interdum a sit amet purus.
+        </p>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada.
+        </p>
+        <p>
+          Thank you for checking out this styled scroll effect for navbar and
+          card content!
+        </p>
+      </div>
+    </div>
+
+    <!-- Scroll button -->
+    <button class="scroll-button" onclick="scrollNavbarAndCard()">
+      Scroll Navbar Down 5% & Card Content Up 5%
+    </button>
+
+    <script>
+      function scrollNavbarAndCard() {
+        const navbar = document.getElementById("navbar");
+        const card = document.getElementById("card");
+
+        // Scroll navbar down by 5% of its current scrollable height
+        const navbarScrollAmount = navbar.scrollHeight * 0.05;
+        navbar.scrollBy({
+          top: navbarScrollAmount,
+          behavior: "smooth",
+        });
+
+        // Scroll card content up by 5% of its current scrollable height
+        const cardScrollAmount = -card.scrollHeight * 0.05;
+        card.scrollBy({
+          top: cardScrollAmount,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>

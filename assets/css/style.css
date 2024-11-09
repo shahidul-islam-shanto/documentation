@@ -335,7 +335,6 @@ body {
   margin: 0;
   font-weight: 400;
   overflow-x: hidden;
-  position: relative;
 }
 
 section,
@@ -690,7 +689,7 @@ select {
 }
 
 .text_grdt {
-  background: linear-gradient(270deg, #C7F801 6.51%, #FACD95 63.52%);
+  background: linear-gradient(270deg, #c7f801 6.51%, #facd95 63.52%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -716,13 +715,13 @@ select {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  color: #283D1F;
-  background: #BCE70C;
+  color: #283d1f;
+  background: #bce70c;
   cursor: pointer;
   transition: ease-out 0.5s;
-  border: 2px solid #BCE70C;
+  border: 2px solid #bce70c;
   border-radius: 10px;
-  box-shadow: inset 0 0 0 0 #0B0B12;
+  box-shadow: inset 0 0 0 0 #0b0b12;
   overflow: hidden;
 }
 .cmn-btn span,
@@ -774,10 +773,10 @@ select {
   color: rgba(var(--p2), 1);
 }
 .cmn-btn.second-alt {
-  background-color: #283D1F;
+  background-color: #283d1f;
   transition: 0.5s all ease;
   color: #fff;
-  border: 1px solid #283D1F;
+  border: 1px solid #283d1f;
 }
 .cmn-btn.second-alt::before, .cmn-btn.second-alt::after {
   transition: 0.5s all ease;
@@ -839,7 +838,7 @@ select {
   color: rgb(var(--p4));
 }
 .cmn-btn.six-alt {
-  background-color: #F3F9FA;
+  background-color: #f3f9fa;
   color: inherit;
 }
 .cmn-btn.six-alt::before, .cmn-btn.six-alt::after {
@@ -917,7 +916,7 @@ select {
   transition: 0.3s linear;
 }
 .hvr:hover {
-  background-color: #2A235B;
+  background-color: #2a235b;
   color: rgba(var(--p2), 1);
 }
 
@@ -1274,7 +1273,7 @@ iframe {
 .loaderall {
   position: relative;
   border: 24px solid;
-  border-color: #0B0B12 transparent #525D2F transparent;
+  border-color: #0b0b12 transparent #525d2f transparent;
   animation: rotate_000 2s linear infinite;
 }
 
@@ -1283,7 +1282,7 @@ iframe {
   content: "";
   display: block;
   border: 24px solid transparent;
-  border-left-color: #283D1F;
+  border-left-color: #283d1f;
   position: absolute;
   left: -24px;
   top: -24px;
@@ -1292,7 +1291,7 @@ iframe {
 }
 
 .loaderall:before {
-  border-color: transparent #BCE70C transparent transparent;
+  border-color: transparent #bce70c transparent transparent;
   transform-origin: 100% 0%;
   animation-delay: 0.5s;
 }
@@ -1495,7 +1494,7 @@ iframe {
   height: 20px;
   width: 20px;
   border-radius: 20px;
-  border: 1px solid #E1E0E7;
+  border: 1px solid #e1e0e7;
 }
 .checkbox-single .checkmark::after {
   content: "";
@@ -1867,7 +1866,7 @@ input[type=radio] {
 .document-area {
   background-color: #eeecec;
   padding: 60px 0;
-  position: relative;
+  position: relative !important;
 }
 .document-area .container .row {
   gap: 4;
@@ -2181,7 +2180,7 @@ input[type=radio] {
   text-decoration: underline;
 }
 .document-area .container .row .sect-area #section-5 {
-  padding-bottom: 2rem 0.5rem;
+  padding-bottom: 2rem;
 }
 .document-area .container .row .sect-area #section-5 h3 {
   color: #000000;
@@ -2232,20 +2231,15 @@ input[type=radio] {
   font-weight: 600;
 }
 .document-area .container .row .side-header .sideber-area {
-  overflow-y: auto;
+  position: fixed;
+  top: 84px;
   background-color: #fffefe;
+  height: 84vh;
+  width: 25%;
   padding: 1rem 1.5rem;
   border-radius: 20px;
-  position: fixed;
-  top: 88px;
-  bottom: 70px;
-  width: 460px;
-  height: 88vh;
+  overflow-y: auto;
   transition: all 0.5s;
-  z-index: 999;
-}
-.document-area .container .row .side-header .sideber-area .stick-to-top {
-  top: 40px;
 }
 .document-area .container .row .side-header .sideber-area .icon-area {
   text-align: center;
@@ -2308,7 +2302,7 @@ input[type=radio] {
 
 .back-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 70px;
   left: 20px;
   text-decoration: none;
   color: white;
@@ -2345,9 +2339,6 @@ input[type=radio] {
   .document-area .container .row .side-header .sideber-area .nav .search .input-group .search-input {
     width: 300px;
     padding: 0.7rem 1rem;
-  }
-  .document-area .container .row .side-header .sideber-area .stick-to-top {
-    top: 0;
   }
 }
 @media (max-width: 991px) {
@@ -2421,15 +2412,129 @@ input[type=radio] {
     padding: 6px 10px;
     background-color: #b7bac0;
     border-radius: 50px;
+    color: #000000;
   }
   .header-area .container .navber-area .toggle-area {
     margin-left: auto;
   }
   .header-area .container .navber-area .toggle-area .toggle-navbar {
-    padding: 6px 10px;
+    padding: 6px 12px;
     margin-top: 0.5rem;
     background-color: #b7bac0;
     border-radius: 50px;
+    color: #000000;
+  }
+  .document-area .container .row .sect-area #section-1-2 ul {
+    padding-left: 1rem;
+  }
+  .document-area .container .row .sect-area #section-1-3 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-2 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-2 p {
+    padding: 0.5rem 0;
+  }
+  .document-area .container .row .sect-area #section-2 ul {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+  }
+  .document-area .container .row .sect-area #section-2 ul li .nav-link {
+    padding-top: 0.5rem;
+    font-size: 14px;
+  }
+  .document-area .container .row .sect-area #section-2-1 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-2-2 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-2-3 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-3 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-3 ul {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+  }
+  .document-area .container .row .sect-area #section-3 ul li .nav-link {
+    padding-top: 0.5rem;
+    font-size: 14px;
+  }
+  .document-area .container .row .sect-area #section-3-1 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-3-1 p .stongx {
+    font-size: 14px;
+  }
+  .document-area .container .row .sect-area #section-3-1 p .note {
+    background-color: #046155;
+  }
+  .document-area .container .row .sect-area #section-3-1 ol {
+    padding-left: 1rem;
+  }
+  .document-area .container .row .sect-area #section-3-2 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-3-2 ol {
+    padding-left: 1rem;
+  }
+  .document-area .container .row .sect-area #section-3-3 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-3-3 ul {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+  }
+  .document-area .container .row .sect-area #section-3-3 ul li {
+    list-style: disc;
+  }
+  .document-area .container .row .sect-area #section-3-3 ul li .nav-link {
+    padding-top: 0.5rem;
+    font-size: 14px;
+  }
+  .document-area .container .row .sect-area #section-3-3-1 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-3-3-1 ol {
+    padding-left: 1rem;
+  }
+  .document-area .container .row .sect-area #section-3-5 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-3-5 ol {
+    padding-left: 1rem;
+  }
+  .document-area .container .row .sect-area #section-4 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-4 ul {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+  }
+  .document-area .container .row .sect-area #section-4 ul li a {
+    padding-top: 0.5rem;
+    font-size: 14px;
+  }
+  .document-area .container .row .sect-area #section-5 {
+    padding: 1rem 0.5rem;
+  }
+  .document-area .container .row .sect-area #section-5 p .stongx .stongy {
+    font-size: 14px;
+  }
+  .document-area .container .row .sect-area #section-5 ul {
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+  .document-area .container .row .sect-area #section-5 ul li a {
+    padding-top: 1rem;
+    font-size: 14px;
+  }
+  .document-area .container .row .sect-area .regard p {
+    font-size: 14px;
   }
   .document-area .container .row .side-header .sideber-area {
     right: -130%;
